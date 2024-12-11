@@ -1,0 +1,278 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\DUYGU\\source\\repos\\odev\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|c:\\users\\duygu\\source\\repos\\odev\\views\\home\\hizmetlerimiz.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|solutionrelative:views\\home\\hizmetlerimiz.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|c:\\users\\duygu\\source\\repos\\odev\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|c:\\users\\duygu\\source\\repos\\odev\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|c:\\users\\duygu\\source\\repos\\odev\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|c:\\users\\duygu\\source\\repos\\odev\\wwwroot\\css\\jquery.timepicker.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|solutionrelative:wwwroot\\css\\jquery.timepicker.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|c:\\users\\duygu\\source\\repos\\odev\\wwwroot\\css\\open-iconic-bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|solutionrelative:wwwroot\\css\\open-iconic-bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|c:\\users\\duygu\\source\\repos\\odev\\wwwroot\\css\\ionicons.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|solutionrelative:wwwroot\\css\\ionicons.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|c:\\users\\duygu\\source\\repos\\odev\\wwwroot\\css\\icomoon.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|solutionrelative:wwwroot\\css\\icomoon.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|c:\\users\\duygu\\source\\repos\\odev\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|c:\\users\\duygu\\source\\repos\\odev\\wwwroot\\images\\bg-1.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|solutionrelative:wwwroot\\images\\bg-1.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|c:\\users\\duygu\\source\\repos\\odev\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|c:\\users\\duygu\\source\\repos\\odev\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|solutionrelative:wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|c:\\users\\duygu\\source\\repos\\odev\\wwwroot\\css\\bootstrap-datepicker.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|solutionrelative:wwwroot\\css\\bootstrap-datepicker.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|c:\\users\\duygu\\source\\repos\\odev\\wwwroot\\css\\flaticon.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|solutionrelative:wwwroot\\css\\flaticon.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|c:\\users\\duygu\\source\\repos\\odev\\wwwroot\\css\\css\\bootstrap-reboot.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{453A6342-3312-45D9-B19C-6426D4111D7B}|odev.csproj|solutionrelative:wwwroot\\css\\css\\bootstrap-reboot.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 360,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "icomoon.css",
+              "DocumentMoniker": "C:\\Users\\DUYGU\\source\\repos\\odev\\wwwroot\\css\\icomoon.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\icomoon.css",
+              "ToolTip": "C:\\Users\\DUYGU\\source\\repos\\odev\\wwwroot\\css\\icomoon.css",
+              "RelativeToolTip": "wwwroot\\css\\icomoon.css",
+              "ViewState": "AgIAAFkBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-11T15:46:33.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ionicons.min.css",
+              "DocumentMoniker": "C:\\Users\\DUYGU\\source\\repos\\odev\\wwwroot\\css\\ionicons.min.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\ionicons.min.css",
+              "ToolTip": "C:\\Users\\DUYGU\\source\\repos\\odev\\wwwroot\\css\\ionicons.min.css",
+              "RelativeToolTip": "wwwroot\\css\\ionicons.min.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-11T15:46:31.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\DUYGU\\source\\repos\\odev\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\DUYGU\\source\\repos\\odev\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAIwCcAAACFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-06T12:12:43.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\DUYGU\\source\\repos\\odev\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\DUYGU\\source\\repos\\odev\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAB8CAAAAAAAAAAAAACACAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-06T13:25:02.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Hizmetlerimiz.cshtml",
+              "DocumentMoniker": "C:\\Users\\DUYGU\\source\\repos\\odev\\Views\\Home\\Hizmetlerimiz.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Hizmetlerimiz.cshtml",
+              "ToolTip": "C:\\Users\\DUYGU\\source\\repos\\odev\\Views\\Home\\Hizmetlerimiz.cshtml",
+              "RelativeToolTip": "Views\\Home\\Hizmetlerimiz.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-09T16:53:12.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "jquery.timepicker.css",
+              "DocumentMoniker": "C:\\Users\\DUYGU\\source\\repos\\odev\\wwwroot\\css\\jquery.timepicker.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\jquery.timepicker.css",
+              "ToolTip": "C:\\Users\\DUYGU\\source\\repos\\odev\\wwwroot\\css\\jquery.timepicker.css",
+              "RelativeToolTip": "wwwroot\\css\\jquery.timepicker.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-11T15:46:49.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\DUYGU\\source\\repos\\odev\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\DUYGU\\source\\repos\\odev\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T16:15:33.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "open-iconic-bootstrap.min.css",
+              "DocumentMoniker": "C:\\Users\\DUYGU\\source\\repos\\odev\\wwwroot\\css\\open-iconic-bootstrap.min.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\open-iconic-bootstrap.min.css",
+              "ToolTip": "C:\\Users\\DUYGU\\source\\repos\\odev\\wwwroot\\css\\open-iconic-bootstrap.min.css",
+              "RelativeToolTip": "wwwroot\\css\\open-iconic-bootstrap.min.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-11T15:46:48.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\DUYGU\\source\\repos\\odev\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\DUYGU\\source\\repos\\odev\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T16:43:07.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "bg-1.jpg - Bitmap [2000x1331, 24 bit, JPG]",
+              "DocumentMoniker": "C:\\Users\\DUYGU\\source\\repos\\odev\\wwwroot\\images\\bg-1.jpg",
+              "RelativeDocumentMoniker": "wwwroot\\images\\bg-1.jpg",
+              "ToolTip": "C:\\Users\\DUYGU\\source\\repos\\odev\\wwwroot\\images\\bg-1.jpg - Bitmap [2000x1331, 24 bit, JPG]",
+              "RelativeToolTip": "wwwroot\\images\\bg-1.jpg - Bitmap [2000x1331, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2024-12-09T17:43:56.414Z",
+              "EditorCaption": " - Bitmap [2000x1331, 24 bit, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\DUYGU\\source\\repos\\odev\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\DUYGU\\source\\repos\\odev\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-09T16:58:58.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\DUYGU\\source\\repos\\odev\\wwwroot\\css\\style.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\style.css",
+              "ToolTip": "C:\\Users\\DUYGU\\source\\repos\\odev\\wwwroot\\css\\style.css",
+              "RelativeToolTip": "wwwroot\\css\\style.css",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-09T16:46:52.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "bootstrap-datepicker.css",
+              "DocumentMoniker": "C:\\Users\\DUYGU\\source\\repos\\odev\\wwwroot\\css\\bootstrap-datepicker.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\bootstrap-datepicker.css",
+              "ToolTip": "C:\\Users\\DUYGU\\source\\repos\\odev\\wwwroot\\css\\bootstrap-datepicker.css",
+              "RelativeToolTip": "wwwroot\\css\\bootstrap-datepicker.css",
+              "ViewState": "AgIAAF4BAAAAAAAAAAAvwHcBAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-09T14:15:36.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "flaticon.css",
+              "DocumentMoniker": "C:\\Users\\DUYGU\\source\\repos\\odev\\wwwroot\\css\\flaticon.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\flaticon.css",
+              "ToolTip": "C:\\Users\\DUYGU\\source\\repos\\odev\\wwwroot\\css\\flaticon.css",
+              "RelativeToolTip": "wwwroot\\css\\flaticon.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-09T14:47:49.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "bootstrap-reboot.css",
+              "DocumentMoniker": "C:\\Users\\DUYGU\\source\\repos\\odev\\wwwroot\\css\\css\\bootstrap-reboot.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\css\\bootstrap-reboot.css",
+              "ToolTip": "C:\\Users\\DUYGU\\source\\repos\\odev\\wwwroot\\css\\css\\bootstrap-reboot.css",
+              "RelativeToolTip": "wwwroot\\css\\css\\bootstrap-reboot.css",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-09T14:15:38.29Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 40,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-namespace odev.Models
+namespace haircare.Models
 {
     public class ErrorViewModel
     {

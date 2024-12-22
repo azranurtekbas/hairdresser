@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Haircare - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:500,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
+
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="/css/aos.css">
+
+    <link rel="stylesheet" href="/css/ionicons.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/css/jquery.timepicker.css">
+    <link rel="stylesheet" href="/css/flaticon.css">
+    <link rel="stylesheet" href="/css/icomoon.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('/images/kayıt2.jpg');" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+                <div class="col-md-9 ftco-animate pb-5 text-center">
+                    <h2 class="mb-0 bread">GİRİŞ YAP</h2>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="Home/Index">Home <i class="ion-ios-arrow-round-forward"></i></a></span> <span>Services <i class="ion-ios-arrow-round-forward"></i></span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-booking bg-light">
+        <div class="container ftco-relative">
+            <div class="row justify-content-center">
+                <div class="col-md-6 ftco-animate">
+                    <!-- Butonlar -->
+                    <div class="text-center mb-4">
+                        <button onclick="showForm('userLogin')" class="btn btn-primary" style="margin: 5px; width: 100%;">Kullanıcı Girişi</button>
+                        <button onclick="showForm('adminLogin')" class="btn btn-primary" style="margin: 5px; width: 100%;">Admin Girişi</button>
+                        <button onclick="showForm('userRegister')" class="btn btn-primary" style="margin: 5px; width: 100%;">Üye Ol</button>
+                    </div>
+
+                    <!-- Kullanıcı Girişi Formu -->
+                    <div id="userLogin" class="form-container" style="display: none;">
+                        <form action="#" method="post" class="appointment-form">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="user_name" placeholder="Kullanıcı Adı">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="user_password" placeholder="Şifre">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
+                        </form>
+                    </div>
+
+                    <!-- Admin Girişi Formu -->
+                    <div id="adminLogin" class="form-container" style="display: none;">
+                        <form onsubmit="return checkAdminCredentials()" class="appointment-form">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="admin_username" placeholder="Admin Kullanıcı Adı">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="admin_password" placeholder="Şifre">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
+                        </form>
+                    </div>
+
+                    <!-- Üye Kayıt Formu -->
+                    <div id="userRegister" class="form-container" style="display: none;">
+                        <form action="#" method="post" class="appointment-form">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="full_name" placeholder="Ad Soyad">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="email" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="register_username" placeholder="Kullanıcı Adı">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="register_password" placeholder="Şifre">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100">Kayıt Ol</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function showForm(formId) {
+                    // Tüm formları gizle
+                    document.querySelectorAll('.form-container').forEach(function (form) {
+                        form.style.display = 'none';
+                    });
+
+                    // Seçilen formu göster
+                    document.getElementById(formId).style.display = 'block';
+                }
+
+                function checkAdminCredentials() {
+                    var username = document.getElementById('admin_username').value;
+                    var password = document.getElementById('admin_password').value;
+
+                    if (username === 'g221210082@sakarya.edu.tr' && password === 'sau') {
+                        window.location.href = '/Home/admin_panel'; // Admin paneline yönlendirin
+                        return false; // Formun gönderilmesini engelleyin
+                    } else {
+                        alert('Hatalı kullanıcı adı veya şifre!');
+                        return false; // Formun gönderilmesini engelleyin
+                    }
+                }
+            </script>
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.easing.1.3.js"></script>
+    <script src="/js/jquery.waypoints.min.js"></script>
+    <script src="/js/jquery.stellar.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/aos.js"></script>
+    <script src="/js/jquery.animateNumber.min.js"></script>
+    <script src="/js/bootstrap-datepicker.js"></script>
+    <script src="/js/jquery.timepicker.min.js"></script>
+    <script src="/js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="/js/google-map.js"></script>
+    <script src="/js/main.js"></script>
+
+</body>
+</html>

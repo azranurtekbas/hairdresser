@@ -1,0 +1,48 @@
+﻿@model haircare.Models.Randevu
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Randevu</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tarih)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tarih)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Calisan)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Calisan.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.musteri)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.musteri.mail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Islem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Islem.IslemsId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Durum)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Durum)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.randevuId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

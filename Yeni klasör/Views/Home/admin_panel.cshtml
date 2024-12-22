@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/aos.css">
+    <link rel="stylesheet" href="/css/ionicons.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/css/jquery.timepicker.css">
+    <link rel="stylesheet" href="/css/flaticon.css">
+    <link rel="stylesheet" href="/css/icomoon.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Çalışan Yönetimi</title>
+</head>
+<body>
+    <div class="container">
+        <h3 class="mt-5">Çalışan Yönetimi</h3>
+
+        <!-- Yönetim Seçenekleri -->
+        <button class="btn btn-primary my-3" onclick="getCalisanlar()">Çalışanları Görüntüle</button>
+        <button class="btn btn-success my-3" onclick="showAddForm()">Yeni Çalışan Ekle</button>
+<!-- İşlemleri Yönet Butonu -->
+<div class="my-3">
+    <button class="btn btn-info" onclick="window.location.href='@Url.Action("Index", "Islemler")'">İşlemleri Yönet</button>
+</div>
+
+
+<!-- Randevuları Yönet Butonu -->
+<div class="my-3">
+    <button class="btn btn-info" onclick="window.location.href='@Url.Action("Index", "Randevular")'">Randevuları Yönet</button>
+</div>
+
+        <!-- Çalışan Ekleme Formu -->
+        <div id="addForm" class="my-3" style="display: none;">
+            <h3>Yeni Çalışan Ekle</h3>
+            <form id="calisanForm">
+                <div class="form-group">
+                    <label for="ad">Ad:</label>
+                    <input type="text" class="form-control" id="ad" required>
+                </div>
+                <div class="form-group">
+                    <label for="soyad">Soyad:</label>
+                    <input type="text" class="form-control" id="soyad" required>
+                </div>
+                <div class="form-group">
+                    <label for="uzmanlikAlani">Uzmanlık Alanı:</label>
+                    <input type="text" class="form-control" id="uzmanlikAlani" required>
+                </div>
+                <div class="form-group">
+                    <label for="uygunlukSaati">Uygunluk Saati:</label>
+                    <input type="text" class="form-control" id="uygunlukSaati" required>
+                </div>
+                <button type="submit" class="btn btn-success">Ekle</button>
+            </form>
+        </div>
+
+        <!-- Çalışan Düzenleme Formu -->
+        <div id="editForm" class="my-3" style="display: none;">
+            <h3>Çalışanı Düzenle</h3>
+            <form id="editCalisanForm">
+                <div class="form-group">
+                    <label for="editAd">Ad:</label>
+                    <input type="text" class="form-control" id="editAd" required>
+                </div>
+                <div class="form-group">
+                    <label for="editSoyad">Soyad:</label>
+                    <input type="text" class="form-control" id="editSoyad" required>
+                </div>
+                <div class="form-group">
+                    <label for="editUzmanlikAlani">Uzmanlık Alanı:</label>
+                    <input type="text" class="form-control" id="editUzmanlikAlani" required>
+                </div>
+                <div class="form-group">
+                    <label for="editUygunlukSaati">Uygunluk Saati:</label>
+                    <input type="text" class="form-control" id="editUygunlukSaati" required>
+                </div>
+                <input type="hidden" id="editId">
+                <button type="submit" class="btn btn-primary">Kaydet</button>
+                <button type="button" class="btn btn-secondary" onclick="hideEditForm()">İptal</button>
+            </form>
+        </div>
+
+        <!-- Çalışanlar Tablosu -->
+        <div id="result"></div>
+    </div>
+
+    <script>
+        // Çalışanları Listele
+        function getCalisanlar() {
+            toggleLoader(true); // Yükleme animasyonunu başlat
+            fetch('/api/CalisansApi')
+                .then(response => response.json())
+                .then(data => {
+                    displayCalisanlar(data);
+                    toggleLoader(false); // Yükleme animasyonunu durdur
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                    toggleLoader(false); // Yükleme animasyonunu durdur
+                    alert('Çalışanlar yüklenemedi!');
+                });
+        }
+
+        function displayCalisanlar(data) {
+            const table = `
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Ad</th>
+                                    <th>Soyad</th>
+                                    <th>Uzmanlık Alanı</th>
+                                    <th>Uygunluk Saati</th>
+                                    <th>İşlemler</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${data.map(calisan => `
+                                    <tr>
+                                        <td>${calisan.id}</td>
+                                        <td>${calisan.calısanAd}</td>
+                                        <td>${calisan.calısanSoyad}</td>
+                                        <td>${calisan.uzmanlikAlani}</td>
+                                        <td>${calisan.uygunlukSaati}</td>
+                                        <td>
+                                            <button class="btn btn-warning btn-sm" onclick="editCalisan(${calisan.id})">Düzenle</button>
+                                            <button class="btn btn-danger btn-sm" onclick="deleteCalisan(${calisan.id})">Sil</button>
+                                        </td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    `;
+            document.getElementById('result').innerHTML = table;
+        }
+
+        // Yeni Çalışan Ekle
+        document.getElementById('calisanForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const yeniCalisan = {
+                calısanAd: document.getElementById('ad').value,
+                calısanSoyad: document.getElementById('soyad').value,
+                uzmanlikAlani: document.getElementById('uzmanlikAlani').value,
+                uygunlukSaati: document.getElementById('uygunlukSaati').value,
+            };
+            toggleLoader(true); // Yükleme animasyonunu başlat
+            fetch('/api/CalisansApi', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(yeniCalisan),
+            })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Çalışan başarıyla eklendi!');
+                        document.getElementById('calisanForm').reset();
+                        getCalisanlar(); // Çalışanları tekrar listele
+                    } else {
+                        alert('Çalışan eklenemedi!');
+                    }
+                    toggleLoader(false); // Yükleme animasyonunu durdur
+                })
+                .catch(error => {
+                    console.error('Error adding employee:', error);
+                    toggleLoader(false); // Yükleme animasyonunu durdur
+                });
+        });
+
+        // Çalışanı Düzenle
+    function editCalisan(id) {
+    toggleLoader(true); // Yükleme animasyonunu başlat
+    fetch(`/api/CalisansApi/${id}`)
+        .then(response => response.json())
+        .then(calisan => {
+            document.getElementById('editAd').value = calisan.calısanAd;
+            document.getElementById('editSoyad').value = calisan.calısanSoyad;
+            document.getElementById('editUzmanlikAlani').value = calisan.uzmanlikAlani;
+            document.getElementById('editUygunlukSaati').value = calisan.uygunlukSaati 
+            document.getElementById('editId').value = calisan.Id;  // ID'yi formda sakla
+            document.getElementById('editForm').style.display = 'block';
+            toggleLoader(false); // Yükleme animasyonunu durdur
+        })
+        .catch(error => {
+            console.error('Error fetching employee data:', error);
+            toggleLoader(false);
+            alert('Çalışan verisi alınamadı!');
+        });
+}
+
+
+       document.getElementById('editCalisanForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const updatedCalisan = {
+        calısanAd: document.getElementById('editAd').value,
+        calısanSoyad: document.getElementById('editSoyad').value,
+        uzmanlikAlani: document.getElementById('editUzmanlikAlani').value,
+        uygunlukSaati: document.getElementById('editUygunlukSaati').value,
+    };
+    const calisanId = document.getElementById('editId').value;
+    toggleLoader(true); // Yükleme animasyonunu başlat
+    fetch(`/api/CalisansApi/${calisanId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updatedCalisan),
+    })
+        .then(response => {
+            if (response.ok) {
+                alert('Çalışan başarıyla güncellendi!');
+                document.getElementById('editForm').style.display = 'none';
+                getCalisanlar(); // Çalışanları tekrar listele
+            } else {
+                alert('Çalışan güncellenemedi!');
+            }
+            toggleLoader(false); // Yükleme animasyonunu durdur
+        })
+        .catch(error => {
+            console.error('Error updating employee:', error);
+            toggleLoader(false); // Yükleme animasyonunu durdur
+        });
+});
+
+
+        // Çalışanı Sil
+        function deleteCalisan(id) {
+            if (confirm('Bu çalışanı silmek istediğinizden emin misiniz?')) {
+                toggleLoader(true); // Yükleme animasyonunu başlat
+                fetch(`/api/CalisansApi/${id}`, {
+                    method: 'DELETE',
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            alert('Çalışan başarıyla silindi!');
+                            getCalisanlar(); // Çalışanları tekrar listele
+                        } else {
+                            alert('Çalışan silinemedi!');
+                        }
+                        toggleLoader(false); // Yükleme animasyonunu durdur
+                    })
+                    .catch(error => {
+                        console.error('Error deleting employee:', error);
+                        toggleLoader(false); // Yükleme animasyonunu durdur
+                    });
+            }
+        }
+
+        function showAddForm() {
+            document.getElementById('addForm').style.display = 'block';
+            document.getElementById('editForm').style.display = 'none';
+            document.getElementById('result').innerHTML = '';
+        }
+
+        function hideEditForm() {
+            document.getElementById('editForm').style.display = 'none';
+        }
+
+        // Yükleme animasyonu için işlev
+        function toggleLoader(show) {
+            const loader = document.getElementById('ftco-loader');
+            if (show) {
+                loader.classList.add('show');
+            } else {
+                loader.classList.remove('show');
+            }
+        }
+    </script>
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.easing.1.3.js"></script>
+    <script src="/js/jquery.waypoints.min.js"></script>
+    <script src="/js/jquery.stellar.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/aos.js"></script>
+    <script src="/js/jquery.animateNumber.min.js"></script>
+    <script src="/js/bootstrap-datepicker.js"></script>
+    <script src="/js/jquery.timepicker.min.js"></script>
+    <script src="/js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="/js/google-map.js"></script>
+    <script src="/js/main.js"></script>
+
+</body>
+</html>

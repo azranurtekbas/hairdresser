@@ -1,0 +1,42 @@
+﻿@model haircare.Models.Calisan
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Calisan</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CalısanAd)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CalısanAd)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CalısanSoyad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CalısanSoyad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UzmanlikAlani)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UzmanlikAlani)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UygunlukSaati)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UygunlukSaati)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

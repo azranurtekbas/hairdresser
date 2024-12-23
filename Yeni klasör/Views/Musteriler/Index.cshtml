@@ -1,4 +1,6 @@
-﻿
+﻿@model IEnumerable<haircare.Models.Musteri>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,57 +28,50 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-
-
-@model haircare.Models.Randevu
-
-
-
-
-
-<h4>Randevu</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Tarih" class="control-label"></label>
-                <input asp-for="Tarih" class="form-control" />
-                <span asp-validation-for="Tarih" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CalisanId" class="control-label"></label>
-                <select asp-for="CalisanId" class ="form-control" asp-items="ViewBag.CalisanId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="musteriId" class="control-label"></label>
-                <select asp-for="musteriId" class ="form-control" asp-items="ViewBag.musteriId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="islemId" class="control-label"></label>
-                <select asp-for="islemId" class ="form-control" asp-items="ViewBag.islemId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Durum" class="control-label"></label>
-                <input asp-for="Durum" class="form-control" />
-                <span asp-validation-for="Durum" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    reate">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.kullanıcıAd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telefonNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sifre)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.kullanıcıAd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telefonNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sifre)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.musteriId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.musteriId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.musteriId">Delete</a>
+            </td>
+        </tr>
 }
-
+    </tbody>
+</table>
 
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
@@ -99,7 +94,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="/js/google-map.js"></script>
     <script src="/js/main.js"></script>
-
 
 </body>
 </html>

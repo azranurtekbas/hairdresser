@@ -24,8 +24,17 @@
         <h3 class="mt-5">Çalışan Yönetimi</h3>
 
         <!-- Yönetim Seçenekleri -->
-        <button class="btn btn-primary my-3" onclick="getCalisanlar()">Çalışanları Görüntüle</button>
-        <button class="btn btn-success my-3" onclick="showAddForm()">Yeni Çalışan Ekle</button>
+       
+        <div class="my-3">
+            <button class="btn btn-info" onclick="getCalisanlar()">Çalışanları Görüntüle</button> 
+        </div>
+
+     <div class="my-3">
+        <button class="btn btn-info" onclick="showAddForm()">Yeni Çalışan Ekle</button>
+     </div>
+
+
+
 <!-- İşlemleri Yönet Butonu -->
 <div class="my-3">
     <button class="btn btn-info" onclick="window.location.href='@Url.Action("Index", "Islemler")'">İşlemleri Yönet</button>
@@ -36,6 +45,13 @@
 <div class="my-3">
     <button class="btn btn-info" onclick="window.location.href='@Url.Action("Index", "Randevular")'">Randevuları Yönet</button>
 </div>
+
+
+        <!-- müşterileri Yönet Butonu -->
+        <div class="my-3">
+            <button class="btn btn-info" onclick="window.location.href='@Url.Action("Index", "Musteriler")'">Müşterileri Yönet</button>
+        </div>
+
 
         <!-- Çalışan Ekleme Formu -->
         <div id="addForm" class="my-3" style="display: none;">

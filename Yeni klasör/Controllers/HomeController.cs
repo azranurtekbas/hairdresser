@@ -68,6 +68,12 @@ namespace haircare.Controllers
 
          }
 
+        public IActionResult services1()
+        {
+
+            return View();
+
+        }
 
 
 

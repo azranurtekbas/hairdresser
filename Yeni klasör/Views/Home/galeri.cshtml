@@ -50,25 +50,7 @@
                         <button onclick="showForm('userRegister')" class="btn btn-primary" style="margin: 5px; width: 100%;">Üye Ol</button>
                     </div>
 
-                    <!-- Kullanıcı Girişi Formu -->
-                    <div id="userLogin" class="form-container" style="display: none;">
-                        <form action="#" method="post" class="appointment-form">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="user_name" placeholder="Kullanıcı Adı">
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <input type="password" class="form-control" id="user_password" placeholder="Şifre">
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
-                        </form>
-                    </div>
-
+               
                     <!-- Admin Girişi Formu -->
                     <div id="adminLogin" class="form-container" style="display: none;">
                         <form onsubmit="return checkAdminCredentials()" class="appointment-form">
@@ -116,11 +98,69 @@
                             <button type="submit" class="btn btn-success w-100">Kayıt Ol</button>
                         </form>
                     </div>
+                       <!-- Kullanıcı Girişi Formu -->
+                    <div id="userLogin" class="form-container" style="display: none;">
+                            <form id="loginForm" action="#" method="post" class="appointment-form">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="user_name" placeholder="Kullanıcı Adı">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="user_password" placeholder="Şifre">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
+                        </form>
+                    </div>
+
+
+
                 </div>
             </div>
 
+
+              
+
             <script>
-                function showForm(formId) {
+
+document.getElementById("loginForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Formun normal submit işlemini engelle
+
+    var email = document.getElementById('user_name').value;
+    var password = document.getElementById('user_password').value;
+
+    // API'ye POST isteği gönder
+    fetch('/api/account/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email: email, password: password })
+    })
+    .then(response => response.json()) // Yanıtı JSON formatında alıyoruz
+    .then(data => {
+        // Yanıtın başarılı olup olmadığını kontrol et
+        if (data.message === "Giriş başarılı.") {
+            // Başarılı giriş sonrası yönlendirme
+            window.location.href = '/Home/services1'; // Services sayfasına yönlendir
+        } else if (data.error) {
+            // Hatalı giriş mesajını göster
+            alert(data.error);
+        }
+    })
+    .catch(error => {
+        console.error('Hata:', error);
+        alert("Bir hata oluştu. Lütfen tekrar deneyin.");
+    });
+});
+
+
+    
+                    function showForm(formId) {
                     // Tüm formları gizle
                     document.querySelectorAll('.form-container').forEach(function (form) {
                         form.style.display = 'none';

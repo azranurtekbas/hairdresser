@@ -1,4 +1,6 @@
-﻿
+﻿@model haircare.Models.Musteri
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,56 +29,43 @@
 </head>
 <body>
 
-
-@model haircare.Models.Randevu
-
-
-
-
-
-<h4>Randevu</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Tarih" class="control-label"></label>
-                <input asp-for="Tarih" class="form-control" />
-                <span asp-validation-for="Tarih" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CalisanId" class="control-label"></label>
-                <select asp-for="CalisanId" class ="form-control" asp-items="ViewBag.CalisanId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="musteriId" class="control-label"></label>
-                <select asp-for="musteriId" class ="form-control" asp-items="ViewBag.musteriId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="islemId" class="control-label"></label>
-                <select asp-for="islemId" class ="form-control" asp-items="ViewBag.islemId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Durum" class="control-label"></label>
-                <input asp-for="Durum" class="form-control" />
-                <span asp-validation-for="Durum" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-
+<h3>Are you sure you want to delete this?</h3>
 <div>
-    <a asp-action="Index">Back to List</a>
+    <h4>Musteri</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.kullanıcıAd)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.kullanıcıAd)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.telefonNo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.telefonNo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.mail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.mail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.sifre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.sifre)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="musteriId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
 </div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
-
 
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
@@ -99,7 +88,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="/js/google-map.js"></script>
     <script src="/js/main.js"></script>
-
 
 </body>
 </html>

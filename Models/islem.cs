@@ -1,13 +1,21 @@
-﻿namespace haircare.Models
-{
-  
-        public class Islem
-        {
-            public int Id { get; set; }
-            public string IslemAd { get; set; }
+﻿using System.ComponentModel.DataAnnotations;
 
-            public string IslemTur { get; set; }
-            public decimal Fiyat { get; set; }
-        }
-    
+namespace haircare.Models
+{
+	public class Islem
+	{
+		[Key] public int IslemsId { get; set; }
+
+		public string IslemAd { get; set; }
+
+		public string IslemTur { get; set; }
+
+		public string IslemSuresi { get; set; }
+
+		public decimal Fiyat { get; set; }
+
+		public List<Calisan> Calisanlar { get; set; } = new List<Calisan>(); // Navigasyon özelliği
+
+		public List<Randevu> Randevular { get; set; } = new List<Randevu>();
+	}
 }

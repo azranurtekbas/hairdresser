@@ -1,0 +1,407 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Haircare - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:500,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
+
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="/css/aos.css">
+
+    <link rel="stylesheet" href="/css/ionicons.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/css/jquery.timepicker.css">
+    <link rel="stylesheet" href="/css/flaticon.css">
+    <link rel="stylesheet" href="/css/icomoon.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+
+    <!-- Hata ve başarı mesajlarını gösterme -->
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Success"]
+        </div>
+    }
+
+
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('/images/s1.jpg');" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+                <div class="col-md-9 ftco-animate pb-5 text-center">
+                    <h2 class="mb-0 bread">Services</h2>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="Home/Index">Home <i class="ion-ios-arrow-round-forward"></i></a></span> <span>Services <i class="ion-ios-arrow-round-forward"></i></span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-team">
+        <div class="container-fluid px-md-5">
+            <div class="row justify-content-center pb-3">
+                <div class="col-md-10 heading-section text-center ftco-animate">
+                    <span class="subheading">Hizmetlerimiz</span>
+                    <h2 class="mb-4">Salonumuzda aşağıdakİ HİZMETLERİMİZ mevcuttur. </h2>
+                    <p>İstediğiniz hizmeti seçerek randevu oluşturabilirsiniz.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 ftco-animate">
+                    <div class="carousel-team owl-carousel">
+                        <div class="item">
+                            <a href="#" class="team text-center">
+                                <div class="img" style="background-image: url(/images/makeup2.jpg);"></div>
+                                <h2>Makyaj</h2>
+                                <span class="position">1.5 saat</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="team text-center">
+                                <div class="img" style="background-image: url(/images/manikür.jpg);"></div>
+                                <h2>Manikür-Pedikür</h2>
+                                <span class="position">2 saat</span>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#" class="team text-center">
+                                <div class="img" style="background-image: url(/images/nailart.jpg);"></div>
+                                <h2>Nail-Art</h2>
+                                <span class="position">1 saat</span>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#" class="team text-center">
+                                <div class="img" style="background-image: url(/images/ciltbakımıjpg.jpg);"></div>
+                                <h2>Cilt Bakımı </h2>
+                                <span class="position">2 saat</span>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#" class="team text-center">
+                                <div class="img" style="background-image: url(/images/spa2.jpg);"></div>
+                                <h2>Spa</h2>
+                                <span class="position">3 saat</span>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#" class="team text-center">
+                                <div class="img" style="background-image: url(/images/agda.jpg);"></div>
+                                <h2>Ağda</h2>
+                                <span class="position">1 saat</span>
+                            </a>
+                        </div>
+
+
+                        <div class="item">
+                            <a href="#" class="team text-center">
+                                <div class="img" style="background-image: url(/images/sacbakımı.jpg);"></div>
+                                <h2>Saç Bakımı</h2>
+                                <span class="position">2 saat</span>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#" class="team text-center">
+                                <div class="img" style="background-image: url(/images/sacboyama.jpg);"></div>
+                                <h2>Saç Boyama </h2>
+                                <span class="position">3 saat</span>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#" class="team text-center">
+                                <div class="img" style="background-image: url(/images/sacsekillendirme.jpg);"></div>
+                                <h2>Saç Şekillendirme</h2>
+                                <span class="position">1 saat</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+
+    </section>
+
+
+    <section id="appointment-section" class="ftco-section ftco-booking bg-light">
+        <div class="container ftco-relative">
+            <div class="row justify-content-center pb-3">
+                <div class="col-md-10 heading-section text-center ftco-animate">
+                    <span class="subheading">Beauty-Ai</span>
+                    <h2 class="mb-4">Yapay Zeka ile Kendinize En uygun Tarzı Bulun</h2>
+                </div>
+            </div>
+            <h3 class="vr">Hemen Arayın +0364 227 35 03</h3>
+
+            <div class="form-group text-center">
+                <input type="submit" value="Yapay Zekaya Git" class="btn btn-primary" onclick="window.location.href='/Home/yapayzeka'">
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-booking bg-light">
+        <div class="container ftco-relative">
+            <div class="row justify-content-center pb-3">
+                <div class="col-md-10 heading-section text-center ftco-animate">
+                    <span class="subheading">Randevu Sistemi</span>
+                    <h2 class="mb-4">Randevu Oluştur</h2>
+                    <p>Randevu Oluşturmadan Önce Lütfen Giriş Yapın</p>
+                </div>
+            </div>
+            <h3 class="vr">Hemen Arayın +0364 227 35 03</h3>
+            <div class="row justify-content-center">
+                <div class="col-md-10 ftco-animate">
+                    <form action="/Home/Services1" method="post" class="appointment-form" id="appointment-section">
+                        <div class="row">
+                            <!-- İsim Alanı -->
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="appointment_name" name="AdSoyad" placeholder="İsim" required>
+                                </div>
+                            </div>
+
+
+                            <!-- Email Alanı -->
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="appointment_email" name="Email" placeholder="Email" required>
+                                </div>
+                            </div>
+
+                            <!-- Tarih Seçimi -->
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="appointment_date">Tarih:</label>
+                                    <input type="date" class="form-control" id="appointment_date" name="Tarih" min="@DateTime.Now.ToString("yyyy-MM-dd")" required>
+                                </div>
+                            </div>
+
+                            <!-- Saat Seçimi -->
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="appointment_time">Saat:</label>
+                                    <input type="time" class="form-control" id="appointment_time" name="Saat" required>
+                                </div>
+                            <!-- Telefon Numarası -->
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" id="phone" name="Telefon" placeholder="Telefon Numarası" pattern="[0-9]{10}" required>
+                                </div>
+                            </div>
+
+                            <!-- Çalışan Seçimi -->
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="select-wrap">
+                                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                        <select name="CalisanId" id="2" class="form-control" required>
+                                            <option value="">Çalışan seçiniz</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- İşlem Seçimi -->
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="select-wrap">
+                                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                        <select name="islemId" id="1" class="form-control" required>
+                                            <option value="">İşlem seçiniz</option>
+                                            @foreach (var islem in ViewBag.Islemler)
+                                            {
+                                                <option value="@islem.IslemsId">@islem.IslemAd</option>
+                                            }
+                                        </select>
+                                         
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ekstra Bilgiler -->
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea name="EkstraBilgi" id="" cols="30" rows="7" class="form-control" placeholder="Eklemek istedikleriniz"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Submit Butonu -->
+                            <div class="form-group">
+                                <input type="submit" value="Randevu Oluştur" class="btn btn-primary">
+                            </div>
+                        </div>
+                        </div>
+                    </form>
+                    
+
+               </div>
+          </div>
+       
+
+   </section>
+    <script>
+        document.getElementById("1").addEventListener("change", function () {
+            var islemId = this.value; // islemId'yi al
+            if (islemId) {
+                fetch('/Home/GetCalisanlarByIslem?islemId=' + islemId) // islemId'yi gönder
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log("Sunucudan gelen veri:", data);
+
+                        var calisanSelect = document.getElementById("2");
+                        calisanSelect.innerHTML = '<option value="">Çalışan seçiniz</option>';
+
+                        if (data && data.length > 0) {
+                            data.forEach(calisan => {
+                                if (calisan.calısanAd) {
+                                    var option = document.createElement("option");
+                                    option.value = calisan.id;
+                                    option.text = calisan.calısanAd + ' ' + calisan.calısanSoyad;
+                                    calisanSelect.appendChild(option);
+                                } else {
+                                    console.log("Çalışan bilgisi eksik veya hatalı:", calisan);
+                                }
+                            });
+                        } else {
+                            console.log("Seçilen işlem için çalışan bulunamadı.");
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Hata:', error);
+                    });
+            } else {
+                document.getElementById("2").innerHTML = '<option value="">Çalışan seçiniz</option>';
+            }
+        });
+    </script>
+
+
+
+    <section class="ftco-section ftco-pricing">
+        <div class="container">
+            <div class="row justify-content-center pb-3">
+                <div class="col-md-10 heading-section text-center ftco-animate">
+                    <span class="subheading">Salon Fİyatlarımız</span>
+                    <h2 class="mb-4">ÜCRETLERİMİZ</h2>
+                    <p>Salondaki Hizmetlerimizin Fiyatları Aşağıdaki Gibidir.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 ftco-animate">
+                    <div class="pricing-entry pb-5 text-center">
+                        <div>
+                            <h3 class="mb-4">Saç ŞEKİLLENDİRME</h3>
+                            <p><span class="price">300₺</span> <span class="per">/ 'den başlayan fiyatlarla'</span></p>
+                        </div>
+                        <ul>
+                            <li>Fön-Maşa-Perma- 350₺ </li>
+                            <li>Saç Boyama- 450₺</li>
+                            <li>Saç Kesimi- 200₺</li>
+                            <li>Saç tasarımı-250₺</li>
+                            <li>Saç Bakımı-310₺</li>
+                        </ul>
+                        <p class="button text-center"><a href="#appointment-section" class="btn btn-primary px-4 py-3">Randevu Al</a></p>
+                    </div>
+                </div>
+                <div class="col-md-3 ftco-animate">
+                    <div class="pricing-entry pb-5 text-center">
+                        <div>
+                            <h3 class="mb-4">Manİkür Pedİkür</h3>
+                            <p><span class="price">300₺</span> <span class="per">/ 'den başlayan fiyatlarla</span></p>
+                        </div>
+                        <ul>
+                            <li>Manikür-300₺</li>
+                            <li>Pedikür-300₺</li>
+                            <li>Kalıcı Oje-550₺</li>
+                            <li>Protez Tırnak-1000₺</li>
+                            <li>Nail Art-1250₺</li>
+                        </ul>
+                        <p class="button text-center"><a href="#appointment-section" class="btn btn-primary px-4 py-3">Randevu Al</a></p>
+                    </div>
+                </div>
+                <div class="col-md-3 ftco-animate">
+                    <div class="pricing-entry active pb-5 text-center">
+                        <div>
+                            <h3 class="mb-4">Makyaj</h3>
+                            <p><span class="price">450₺</span> <span class="per">/ 'den başlayan fiyatlarla</span></p>
+                        </div>
+                        <ul>
+                            <li>Günlük Makyaj- 450₺</li>
+                            <li>Gelin Makyajı- 2500₺</li>
+                            <li>Özel Gün Makyajı- 1500₺</li>
+                        </ul>
+                        <p class="button text-center"><a href="#appointment-section" class="btn btn-primary px-4 py-3">Randevu Al</a></p>
+                    </div>
+                </div>
+                <div class="col-md-3 ftco-animate">
+                    <div class="pricing-entry pb-5 text-center">
+                        <div>
+                            <h3 class="mb-4">Vücut ve Cİlt Bakımı</h3>
+                            <p><span class="price">560₺</span> <span class="per">/ 'den başlayan fiyatlarla</span></p>
+                        </div>
+                        <ul>
+                            <li>Masaj-1000₺</li>
+                            <li>Spa- 1255₺</li>
+                            <li>Ayak Masajı-750₺</li>
+                            <li>Vucüt Masajı- 560₺</li>
+                            <li>Sauna- 2000₺</li>
+                        </ul>
+                        <p class="button text-center"><a href="#appointment-section" class="btn btn-primary px-4 py-3">Randevu Al</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.easing.1.3.js"></script>
+    <script src="/js/jquery.waypoints.min.js"></script>
+    <script src="/js/jquery.stellar.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/aos.js"></script>
+    <script src="/js/jquery.animateNumber.min.js"></script>
+    <script src="/js/bootstrap-datepicker.js"></script>
+    <script src="/js/jquery.timepicker.min.js"></script>
+    <script src="/js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="/js/google-map.js"></script>
+    <script src="/js/main.js"></script>
+
+</body>
+</html>

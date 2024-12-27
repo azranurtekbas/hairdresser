@@ -1,0 +1,117 @@
+﻿@model dynamic
+
+@{
+    ViewData["Title"] = "AI Saç Stili Önerisi";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="text-center">AI Saç Stili Önerisi</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="imageInput" class="form-label">Fotoğraf Seçin</label>
+                            <input type="file" id="imageInput" accept="image/*" class="form-control">
+                        </div>
+                        <div class="col-md-6 d-flex align-items-end">
+                            <button id="analyzeButton" class="btn btn-primary w-100">Analiz Et</button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="mb-3">Yüklenen Fotoğraf</h3>
+                            <div class="img-preview-container mb-3">
+                                <img id="imagePreview" src="#" alt="Yüklenen Fotoğraf" class="img-fluid rounded" style="display: none;">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="mb-3">Öneriler</h3>
+                            <div id="recommendations" class="recommendations-container"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        const fileInput = document.getElementById('imageInput');
+        const imagePreview = document.getElementById('imagePreview');
+        const analyzeButton = document.getElementById('analyzeButton');
+        const recommendationsDiv = document.getElementById('recommendations');
+
+        let base64Data = '';
+
+        fileInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = (e) => {
+                base64Data = e.target.result;
+                imagePreview.src = base64Data;
+                imagePreview.style.display = 'block';
+            }
+
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        });
+
+        analyzeButton.addEventListener('click', () => {
+            if (!base64Data) {
+                alert('Lütfen bir fotoğraf seçin.');
+                return;
+            }
+
+            recommendationsDiv.innerHTML = '<p>Analiz ediliyor...</p>';
+
+            fetch('/AI/Index', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ photo: base64Data })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    recommendationsDiv.innerHTML = '';
+
+                    if (data.recommendations && data.recommendations.length > 0) {
+                        data.recommendations.forEach(recommendation => {
+                            const p = document.createElement('p');
+                            p.textContent = recommendation;
+                            recommendationsDiv.appendChild(p);
+                        });
+                    } else {
+                        recommendationsDiv.textContent = 'Öneri bulunamadı.';
+                    }
+                })
+                .catch(error => {
+                    console.error('Hata:', error);
+                    recommendationsDiv.textContent = 'Analiz sırasında bir hata oluştu.';
+                });
+        });
+    </script>
+
+    <style>
+        .img-preview-container {
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            padding: 0.375rem 0.75rem;
+        }
+
+        .recommendations-container {
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            padding: 0.375rem 0.75rem;
+            min-height: 150px;
+        }
+    </style>
+}

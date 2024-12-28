@@ -1,31 +1,45 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace haircare.Models
+﻿using haircaredeneme.Models;
+using Microsoft.EntityFrameworkCore;
+namespace haircaredeneme.Models
 {
-	public class ApplicationDbContext : DbContext
-	{
-		public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-			: base(options)
-		{
-		}
+    public class ApplicationDbContext : DbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options)
+        {
+        }
 
-		// DbSet tanımları
-		public DbSet<Islem> Islemler { get; set; }
-		public DbSet<Calisan> Calisanlar { get; set; }
-		public DbSet<Randevu> Randevular { get; set; }
-		public DbSet<Musteri> Musteriler { get; set; }
 
-		protected override void OnModelCreating(ModelBuilder modelBuilder)
-		{
-			// Calisan - Islem ilişkisi
-			modelBuilder.Entity<Calisan>()
-				.HasOne(c => c.UzmanlikAlani)
-				.WithMany()
-				.HasForeignKey(c => c.UzmanlikAlaniId)
-				.OnDelete(DeleteBehavior.Restrict);
+        public DbSet<Islem> Islemler { get; set; }
+        public DbSet<Calisan> Calisanlar { get; set; }
+        public DbSet<Randevu> Randevular { get; set; }
+        public DbSet<Musteri> Musteriler { get; set; }
 
-			base.OnModelCreating(modelBuilder);
-		}
 
-	}
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Islem>()
+            .HasOne(i => i.CalisanNavigation)
+            .WithMany(c => c.Islemler)
+            .HasForeignKey(i => i.CalısanId);
+
+            base.OnModelCreating(modelBuilder);
+ 
+         
+        }
+
+       
+
+
+
+
+    }
+
+
+
+
+
+
+
 }

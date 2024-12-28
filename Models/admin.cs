@@ -1,4 +1,4 @@
-﻿namespace haircare.Models
+﻿namespace haircaredeneme.Models
 {
     public class Admin
     {

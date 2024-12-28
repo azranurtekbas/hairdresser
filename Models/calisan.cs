@@ -1,23 +1,28 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using haircaredeneme.Models;
+using System.Text.Json.Serialization;
 
-namespace haircare.Models
+namespace haircaredeneme.Models
 {
 
-	public class Calisan
-	{
-		[Key] // Birincil anahtar olduğunu belirtir
-		public int Id { get; set; }
-		public string CalısanAd { get; set; }
-		public string CalısanSoyad { get; set; }
-		public string UygunlukSaati { get; set; }
-		public int? UzmanlikAlaniId { get; set; } // Uzmanlık (Nullable Foreign Key)
-    	public Islem UzmanlikAlani { get; set; }
-		// Navigation property
+    public class Calisan
+    {
+        [Key]
+        public int Id { get; set; }
 
-		public List<Randevu> Randevular { get; set; } = new List<Randevu>();
+        [JsonPropertyName("CalisanAd")] // JSON içinde doğru isimlendirme
+        public string CalısanAd { get; set; }
 
+        [JsonPropertyName("CalisanSoyad")]
+        public string CalısanSoyad { get; set; }
 
+        public string UzmanlikAlani { get; set; }
+        public TimeSpan UygunlukSaati { get; set; }
 
-	}
+        public ICollection<Islem> Islemler { get; set; }
+        public List<Randevu> Randevular { get; set; } = new List<Randevu>();
+
+    }
 }
+

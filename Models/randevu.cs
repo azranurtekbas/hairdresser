@@ -1,4 +1,4 @@
-﻿namespace haircare.Models
+﻿namespace haircaredeneme.Models
 {
     public enum RandevuDurum
     {
@@ -11,7 +11,7 @@
     public class Randevu
     {
         public int randevuId { get; set; }
-        public DateTime Tarih { get; set; }
+        public DateTime RandevuTarihSaat { get; set; }
         public int CalisanId { get; set; }
         public int musteriId { get; set; }
         public int islemId { get; set; }

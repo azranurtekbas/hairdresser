@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace haircare.Models
+namespace haircaredeneme.Models
 {
     public class Musteri
     {

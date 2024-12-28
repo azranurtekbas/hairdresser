@@ -1,21 +1,28 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using haircaredeneme.Models;
+using System.ComponentModel.DataAnnotations;
 
-namespace haircare.Models
+namespace haircaredeneme.Models
 {
-	public class Islem
-	{
-		[Key] public int IslemsId { get; set; }
 
-		public string IslemAd { get; set; }
+    public class Islem
+    {
+        [Key] public int IslemsId { get; set; }
+        public string IslemAd { get; set; }
 
-		public string IslemTur { get; set; }
+        public string IslemTur { get; set; }
 
-		public string IslemSuresi { get; set; }
+        public string IslemSuresi { get; set; }
 
-		public decimal Fiyat { get; set; }
+        public decimal Fiyat { get; set; }
+        public int CalısanId { get; set; }
+        public virtual Calisan CalisanNavigation { get; set; }
 
-		public List<Calisan> Calisanlar { get; set; } = new List<Calisan>(); // Navigasyon özelliği
+        public List<Randevu>? Randevular { get; set; } = new List<Randevu>();
 
-		public List<Randevu> Randevular { get; set; } = new List<Randevu>();
-	}
+
+
+
+
+    }
+
 }

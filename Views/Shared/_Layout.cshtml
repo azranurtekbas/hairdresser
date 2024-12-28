@@ -3,30 +3,32 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Kuaför Uygulaması </title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>@ViewData["Title"] - haircare</title>
 
-    <!-- Temanın CSS Dosyaları -->
-    <link rel="stylesheet" href=@Url.Content("~/css/bootstrap.min.css") />
-    <link rel="stylesheet" href=@Url.Content("~/css/bootstrap/bootstrap-grid.css") />
-    <link rel="stylesheet" href=@Url.Content("~/css/bootstrap/bootstrap-reboot.css") />
-    <link rel="stylesheet" href=@Url.Content("~/css/animate.css") />
-    <link rel="stylesheet" href=@Url.Content("~/css/aos.css" )/>
-    <link rel="stylesheet" href=@Url.Content("~/css/bootstrap-datepicker.css") />
-    <link rel="stylesheet" href=@Url.Content("~/css/ionicons.min.css" )/>
-    <link rel="stylesheet" href=@Url.Content("~/css/flaticon.css") />
-    <link rel="stylesheet" href=@Url.Content("~/css/icomoon.css" )/>
-    <link rel="stylesheet" href=@Url.Content("~/css/jquery.timepicker.css") />
-    <link rel="stylesheet" href=@Url.Content("~/css/magnific-popup.css") />
-    <link rel="stylesheet" href=@Url.Content("~/css/open-iconic-bootstrap.min.css") />
-    <link rel="stylesheet" href=@Url.Content("~/css/owl.carousel.min.css") />
-    <link rel="stylesheet" href=@Url.Content("~/css/owl.theme.default.min.css") />
-    <link rel="stylesheet" href="@Url.Content("~/css/style.css")" />
-
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+    <link rel="stylesheet" href="/haircare.style.css" />
+    <link href="/css/_text-hide.css" rel="stylesheet" />
+    <link href="/css/aos.css" rel="stylesheet" />
+    <link href="/css/animate.css" rel="stylesheet" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap-datepicker.css" rel="stylesheet" />
+    <link href="/css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="/css/bootstrap-reboot.css" rel="stylesheet" />
+    <link href="/css/flaticon.css" rel="stylesheet" />
+    <link href="/css/icomoon.css" rel="stylesheet" />
+    <link href="/css/ionicons.min.css" rel="stylesheet" />
+    <link href="/css/jquery.timepicker.css" rel="stylesheet " />
+    <link href="/css/magnific-popup.css" rel="stylesheet" />
+    <link href="/css/open-iconic-bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="/css/owl.theme.default.min.css" rel="stylesheet" />
 </head>
-
-
 <body>
+
+
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
             <div class="container">
@@ -37,14 +39,16 @@
 
                 <div class="collapse navbar-collapse" id="ftco-nav">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"> <a asp-controller="Home" asp-action="GeriDon" class="nav-link">Anasayfa</a></li>
-                        <li class="nav-item"><a href="~/Home/Hizmetlerimiz" class="nav-link">HİZMETLERİMİZ</a></li>
-                        <li class="nav-item"><a href="#galeri" class="nav-link">Galeri</a></li>
-                        <li class="nav-item"><a href="about.html" class="nav-link">Hakkımızda</a></li>
-                        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                        <li class="nav-item"><a href="contact.html" class="nav-link">İLETİŞİM</a></li>
+                        <li class="nav-item"><a href="/Home/Index" class="nav-link">Anasayfa</a></li>
+                        <li class="nav-item"><a href="/Home/services" class="nav-link">HİZMETLERİMİZ</a></li>
+                        <li class="nav-item"><a href="/Home/galeri" class="nav-link">Giriş Yap</a></li>
+                        <li class="nav-item"><a href="/Home/about" class="nav-link">Hakkımızda</a></li>
+                        <li class="nav-item"><a href="/Home/blog" class="nav-link">Blog</a></li>
+                    
                     </ul>
                 </div>
+
+
             </div>
         </nav>
     </header>
@@ -53,87 +57,86 @@
             @RenderBody()
         </main>
     </div>
-
-
     <footer class="ftco-footer ftco-section">
         <div class="container">
-		<div class="container">
-			<div class="row mb-5">
-				<div class="col-md">
-					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2 logo">Saç Bakımı</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-							<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-							<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-							<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md">
-					<div class="ftco-footer-widget mb-4 ml-md-5">
-						<h2 class="ftco-heading-2">Bİlgİler</h2>
-						<ul class="list-unstyled">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-md">
+                        <div class="ftco-footer-widget mb-4">
+                            <h2 class="ftco-heading-2 logo">Saç Bakımı</h2>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="ftco-footer-widget mb-4 ml-md-5">
+                            <h2 class="ftco-heading-2">Bİlgİler</h2>
+                            <ul class="list-unstyled">
 
-							<li><a href="#" class="py-2 d-block">Gizlilik</a></li>
-							<li><a href="#" class="py-2 d-block">Şartlar</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md">
-					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2">Bağlantılar</h2>
-						<ul class="list-unstyled">
-							<li><a href="#" class="py-2 d-block">Ana Sayfa</a></li>
-							<li><a href="#" class="py-2 d-block">Hakkımızda</a></li>
-							<li><a href="#" class="py-2 d-block">Hizmetlerimiz</a></li>
-							<li><a href="#" class="py-2 d-block">Blog</a></li>
-							<li><a href="#" class="py-2 d-block">İletişim</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md">
-					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2">Sorularınız İÇİN?</h2>
-						<div class="block-23 mb-3">
-							<ul>
-								<li><span class="icon icon-map-marker"></span><span class="text">Serdivan/Sakarya,TR</span></li>
-								<li><a href="#"><span class="icon icon-phone"></span><span class="text">+90 530 043 54 25</span></a></li>
-								<li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 text-center">
-				</div>
-			</div>
-		</div>
+                                <li><a href="#" class="py-2 d-block">Gizlilik</a></li>
+                                <li><a href="#" class="py-2 d-block">Şartlar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="ftco-footer-widget mb-4">
+                            <h2 class="ftco-heading-2">Bağlantılar</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="py-2 d-block">Ana Sayfa</a></li>
+                                <li><a href="#" class="py-2 d-block">Hakkımızda</a></li>
+                                <li><a href="#" class="py-2 d-block">Hizmetlerimiz</a></li>
+                                <li><a href="#" class="py-2 d-block">Blog</a></li>
+                                <li><a href="#" class="py-2 d-block">İletişim</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="ftco-footer-widget mb-4">
+                            <h2 class="ftco-heading-2">Sorularınız İÇİN?</h2>
+                            <div class="block-23 mb-3">
+                                <ul>
+                                    <li><span class="icon icon-map-marker"></span><span class="text">Serdivan/Sakarya,TR</span></li>
+                                    <li><a href="#"><span class="icon icon-phone"></span><span class="text">+90 530 043 54 25</span></a></li>
+                                    <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
 
-    <script src="~/js/aos.js"></script>
-    <script src="~/js/bootstrap.min.js"></script>
-    <script src="~/js/bootstrap-datepicker.js"></script>
-    <script src="~/js/google-map.js"></script>
-    <script src="~/js/jquery.animatenumber.min.js"></script>
-    <script src="~/js/jquery.easing.1.3.js"></script>
-    <script src="~/js/jquery.magnific-popup.min.js"></script>
-    <script src="~/js/jquery.min.js"></script>
-    <script src="~/js/jquery.stellar.min.js"></script>
-    <script src="~/js/jquery.timepicker.min.js"></script>
-    <script src="~/js/jquery.waypoints.min.js"></script>
-    <script src="~/js/jquery-3.2.1.min.js"></script>
-    <script src="~/js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="~/js/main.js"></script>
-    <script src="~/js/owl.carousel.min.js"></script>
-    <script src="~/js/popper.min.js"></script>
-    <script src="~/js/scrollax.min.js"></script>
+
+
+    </footer>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/aos.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap-datepicker.js" ></script>
+    <script src="/js/google-map.js"></script>
+    <script src="/js/jquery.animatenumber.min.js"></script>
+    <script src="/js/jquery.easing.1.3.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.stellar.min.js"></script>
+    <script src="/js/jquery.timepicker.min.js"></script>
+    <script src="/js/jquery-3.2.1.min.js" ></script>
+    <script src="/js/jquery.waypoints.min.js"></script>
+    <script src="/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="/js/main.js" ></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/scrollax.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 
 </html>
